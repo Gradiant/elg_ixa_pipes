@@ -17,8 +17,14 @@ repositories {
 }
 
 dependencies {
-  implementation 'eu.european-language-grid:elg-spring-boot-starter:0.4-SNAPSHOT'
+  implementation 'eu.european-language-grid:elg-spring-boot-starter:1.0.0'
   implementation 'org.apache.commons:commons-lang3'
   implementation 'com.fasterxml.jackson.core:jackson-databind'
+  //implementation 'eus.ixa:ixa-pipe-nerc:2.0.0'
+  implementation 'org.apache.opennlp:opennlp-tools:1.9.4'
+  implementation ('eus.ixa:ixa-pipe-tok:1.8.6'){
+    exclude group: 'org.slf4j'
+  }
+  implementation 'eus.ixa:ixa-pipe-pos:1.5.2'
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
