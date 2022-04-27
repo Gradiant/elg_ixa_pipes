@@ -32,13 +32,6 @@ public class Handler {
         //tok and pos models for create KAFDocument
         KAFDocument kaffromtok = createKAFDocumentfromTOKmodel(inputString);
         KAFDocument kaffrompos = runPOSModel(kaffromtok,lang);
-        String kafToString = kaffrompos.toString();
-
-        BufferedWriter bwriter = new BufferedWriter(
-                new OutputStreamWriter(System.out, UTF_8));
-        bwriter.write(kafToString);
-        bwriter.close();
-        inputString.close();
 
         return createResponse(kaffrompos.getTerms());
 
