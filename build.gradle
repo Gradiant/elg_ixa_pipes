@@ -2,12 +2,24 @@ plugins {
   id 'org.springframework.boot' version '2.2.2.RELEASE'
   id 'java'
 }
+bootJar {
+  enabled = false
+}
+
+jar {
+  enabled = true
+  archivesBaseName = 'elg_ixa_pipes'
+  manifest {
+    attributes 'Main-Class': 'com.example.elg.Application'
+  }
+}
 
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.example.elg'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+
 
 repositories {
   mavenCentral()
@@ -20,7 +32,6 @@ dependencies {
   implementation 'eu.european-language-grid:elg-spring-boot-starter:1.0.0'
   implementation 'org.apache.commons:commons-lang3'
   implementation 'com.fasterxml.jackson.core:jackson-databind'
-  //implementation 'eus.ixa:ixa-pipe-nerc:2.0.0'
   implementation 'org.apache.opennlp:opennlp-tools:1.9.4'
   implementation ('eus.ixa:ixa-pipe-tok:1.8.6'){
     exclude group: 'org.slf4j'

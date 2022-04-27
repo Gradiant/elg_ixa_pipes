@@ -88,8 +88,8 @@ public class Handler {
         //Set to default parameters
         Properties annotateProperties = new Properties();
         annotateProperties.setProperty("language", lang);
-        annotateProperties.setProperty("model", "models/eu-pos-perceptron-ud.bin");
-        annotateProperties.setProperty("lemmatizerModel", "models/eu-lemma-perceptron-ud.bin");
+        annotateProperties.setProperty("model", "models/ud-morph-models-1.5.0/eu/eu-pos-perceptron-ud.bin");
+        annotateProperties.setProperty("lemmatizerModel", "models/ud-morph-models-1.5.0/eu/eu-lemma-perceptron-ud.bin");
         annotateProperties.setProperty("multiwords", "false");
         annotateProperties.setProperty("dictag", "false");
 
