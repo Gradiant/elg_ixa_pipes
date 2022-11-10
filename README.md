@@ -12,7 +12,7 @@ The repository with the implementation of the API can be found [here](https://gi
 sh docker-build.sh
 ```
 
-## Run
+## Run 
 
 ```
 docker run --rm -p  0.0.0.0:8080:8080 --name ixa_pipes elg_ixa_pipes_pos:1.0
